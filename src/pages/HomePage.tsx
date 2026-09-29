@@ -579,18 +579,31 @@ export default function HomePage() {
                 >
                   <Mail className="h-4 w-4" /> Email
                 </a>
+
                 <a
                   href="tel:+8801627832102"
                   className="inline-flex items-center gap-2 hover:text-foreground"
                 >
                   <Phone className="h-4 w-4" /> Phone
                 </a>
-                <span className="inline-flex items-center gap-2">
-                  <Linkedin className="h-4 w-4" /> LinkedIn on request
-                </span>
-                <span className="inline-flex items-center gap-2">
-                  <Github className="h-4 w-4" /> GitHub on request
-                </span>
+
+                <a
+                  href="https://www.linkedin.com/in/ferdousi-begum-tuli"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-foreground"
+                >
+                  <Linkedin className="h-4 w-4" /> LinkedIn
+                </a>
+
+                <a
+                  href="https://github.com/ferdousibegumtuli"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-foreground"
+                >
+                  <Github className="h-4 w-4" /> GitHub
+                </a>
               </div>
             </div>
           </div>
