@@ -106,7 +106,8 @@ export default async function handler(req: Request): Promise<Response> {
   if (!apiKey) {
     return new Response(
       JSON.stringify({
-        error: 'Server is missing OPENAI_API_KEY. Add it in Vercel → Project Settings → Environment Variables, then redeploy.',
+        error:
+          'Server is missing OPENAI_API_KEY. Add it in Vercel → Project Settings → Environment Variables, then redeploy.',
       }),
       { status: 500, headers: { 'Content-Type': 'application/json' } },
     );
@@ -131,14 +132,14 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   try {
-    const upstream = await fetch('https://api.openai.com/v1/chat/completions', {
+    const upstream = await fetch('https://api.hcnsec.cn/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
+        model: 'auto',
         temperature: 0.4,
         max_tokens: 500,
         messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
@@ -148,7 +149,9 @@ export default async function handler(req: Request): Promise<Response> {
     if (!upstream.ok) {
       const text = await upstream.text().catch(() => '');
       return new Response(
-        JSON.stringify({ error: `OpenAI request failed (${upstream.status}): ${text.slice(0, 300)}` }),
+        JSON.stringify({
+          error: `OpenAI request failed (${upstream.status}): ${text.slice(0, 300)}`,
+        }),
         { status: 502, headers: { 'Content-Type': 'application/json' } },
       );
     }
