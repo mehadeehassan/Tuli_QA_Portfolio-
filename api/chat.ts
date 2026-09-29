@@ -139,7 +139,7 @@ export default async function handler(req: Request): Promise<Response> {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'auto',
+        model: 'Qwen3.8-27B',
         temperature: 0.4,
         max_tokens: 500,
         messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
