@@ -1,0 +1,36 @@
+:where(a, button, label, select, summary, input, textarea),
+:where([role='button'], [role='tab'], [role='menuitem'], [role='option']) {
+  touch-action: manipulation;
+}
+
+:where(html) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(a, button, summary, [role='button'], [tabindex]):where(:focus-visible) {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  scroll-margin-top: 5rem;
+  text-wrap: balance;
+}
+
+:where(p, li, dd, figcaption, blockquote) {
+  text-wrap: pretty;
+}
+
+:where(select) {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
