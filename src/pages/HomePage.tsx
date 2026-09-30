@@ -25,6 +25,8 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 const resumeUrl = '/Tuli_Resume.pdf';
+const gmailComposeUrl =
+  'https://mail.google.com/mail/?view=cm&fs=1&to=ferdousibegum1108@gmail.com';
 
 const skills = [
   { label: 'Automation Testing', value: 'Playwright · Jest · API flows', icon: Code2 },
@@ -215,7 +217,7 @@ export default function HomePage() {
               </div>
               <div className="mt-12 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
                 <a
-                  href="mailto:ferdousibegum1108@gmail.com"
+                  href={gmailComposeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
@@ -579,7 +581,7 @@ export default function HomePage() {
               </div>
               <div className="mt-8 flex flex-wrap gap-5 text-sm text-muted-foreground">
                 <a
-                  href="mailto:ferdousibegum1108@gmail.com"
+                  href={gmailComposeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 hover:text-foreground"
@@ -619,7 +621,7 @@ export default function HomePage() {
 
       <footer className="border-t border-border/60">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-5 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <p>© 2026 Ferdousi Begum Tuli · Built for quality.</p>
+          <p>© {new Date().getFullYear()} Ferdousi Begum Tuli · Built for quality.</p>
           <p className="font-mono text-xs">manual minds · automated confidence</p>
         </div>
       </footer>
