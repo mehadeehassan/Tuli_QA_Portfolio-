@@ -216,6 +216,8 @@ export default function HomePage() {
               <div className="mt-12 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
                 <a
                   href="mailto:ferdousibegum1108@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
                 >
                   <Mail className="h-4 w-4 text-primary" /> ferdousibegum1108@gmail.com
@@ -562,7 +564,10 @@ export default function HomePage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button className="rounded-full px-5" asChild>
-                  <a href="mailto:ferdousibegum1108@gmail.com">
+                  <a href="mailto:ferdousibegum1108@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
                     Send an email <Mail className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
@@ -575,6 +580,8 @@ export default function HomePage() {
               <div className="mt-8 flex flex-wrap gap-5 text-sm text-muted-foreground">
                 <a
                   href="mailto:ferdousibegum1108@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 hover:text-foreground"
                 >
                   <Mail className="h-4 w-4" /> Email
