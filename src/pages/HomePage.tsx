@@ -566,11 +566,11 @@ export default function HomePage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button className="rounded-full px-5" asChild>
-                  <a href="mailto:ferdousibegum1108@gmail.com"
+                  <a href={gmailComposeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     >
-                    Send an email <Mail className="ml-2 h-4 w-4" />
+                    Send an email <Mail className="ml-1 h-4 w-4" />
                   </a>
                 </Button>
                 <Button variant="outline" className="rounded-full px-5" asChild>
